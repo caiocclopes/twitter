@@ -1,16 +1,17 @@
-require 'rubygems'
-require 'mongoid'
+require "rubygems"
+require "twitter/model"
+require "twitter/constants"
 
 module Twitter
-  
-  def PluginTest
-    puts "this is the twitter gem!"
+  class << self
+    
+    def twitterTest
+      return "this is the twitter gem speaking..."
+    end
+    
+    def getAccount
+      return Twitter::Model::TwitterModel.all
+    end
+    
   end
-  
-  class TwitterModel
-    include Mongoid::Document
-    field :search_term
-    field :account
-  end
-  
 end
