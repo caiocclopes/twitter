@@ -29,9 +29,9 @@ module Twitter
   ##
   # Returns the twitter config when no area is defined
   ##
-  def getTwitter
-    return Twitter::Model::TwitterModel.first
-  end
+  # def getTwitter
+  #   return Twitter::Model::TwitterModel.first
+  # end
     
-  end
+  #end
 end
