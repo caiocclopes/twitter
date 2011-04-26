@@ -27,11 +27,11 @@ module Twitter
     end
     
   ##
-  # Returns the twitter config when no area is defined
+  # Returns all the twitter configurations stored in the database
   ##
-  # def getTwitter
-  #   return Twitter::Model::TwitterModel.first
-  # end
+    def getAll
+      return Twitter::Model::TwitterModel.all
+    end
     
-  #end
+  end
 end
