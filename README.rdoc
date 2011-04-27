@@ -1,3 +1,24 @@
 Social Twitter gem
 
 This gem provides the basic configuration for a twitter module
+
+===============================
+Available Methods:
+
+- getTwitter(area_id)
+returns all the twitter configurations associated with a specific area_id, it is up to the caller to check if this array is empty or not.
+
+- getAll
+return all the Twitter configurations
+
+example:
+
+Twitter.getAll
+
+===============================
+
+or, if you would like to access the model directly for more advanced querying, use:
+
+Twitter::Model::TwitterModel
+
+to access the model object, then you can specify your desired query.
