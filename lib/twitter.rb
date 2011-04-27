@@ -9,13 +9,6 @@ module Twitter
   class << self
   
   ##
-  # Test method, does not do anything usefull
-  ##  
-    def twitterTest
-      return "this is the twitter gem speaking..."
-    end
-  
-  ##
   # Returns the twitter config for a given area
   ##
     def getTwitter (area)
@@ -30,7 +23,7 @@ module Twitter
   # Returns all the twitter configurations stored in the database
   ##
     def getAll
-      return Twitter::Model::TwitterModel.all
+      return Twitter::Model::TwitterModel.all.entries
     end
     
   end
