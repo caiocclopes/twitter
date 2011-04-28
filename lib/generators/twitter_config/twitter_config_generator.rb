@@ -3,6 +3,8 @@
 
 class TwitterConfigGenerator < Rails::Generators::Base
 
+  source_root File.expand_path("../templates", __FILE__)
+  
   def generate_scaffold
     generate("scaffold", "twitter_config search_term:string account_name:string priority:integer area_id:integer")
     remove_file "/app/models/twitter_config.rb"
