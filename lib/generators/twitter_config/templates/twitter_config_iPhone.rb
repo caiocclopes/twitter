@@ -7,7 +7,11 @@ class TwitterController < ApplicationController
     end
 
     if(twitter != nil)
-      render :text => twitter.entries.to_json
+      if(twitter.entries.count == 1)
+        render :text => twitter.entries.first.to_json
+      else
+        render :text => twitter.entries.to_json
+      end
     else
       render :text => {:success => false}.to_json
     end
